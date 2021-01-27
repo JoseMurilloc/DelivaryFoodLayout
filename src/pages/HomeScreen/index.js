@@ -1,12 +1,31 @@
-import React, {useState} from 'react';
-
+import React, {useState, useEffect} from 'react';
 import {Image, Text, StyleSheet} from 'react-native';
+import {
+  useSharedValue,
+  useAnimatedStyle,
+  withTiming,
+} from 'react-native-reanimated';
+
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import Styles from './style';
 
 const HomeScreen = () => {
   const [toggleCheckBox, setToggleCheckBox] = useState(false);
+  const formPosition = useSharedValue(30);
+  const formOpacity = useSharedValue(0);
+
+  useEffect(() => {
+    formPosition.value = withTiming(0, {duration: 1000});
+    formOpacity.value = withTiming(1, {duration: 1000});
+  }, [formPosition, formOpacity]);
+
+  const formStyle = useAnimatedStyle(() => {
+    return {
+      transform: [{translateY: formPosition.value}],
+      opacity: formOpacity.value,
+    };
+  }, []);
 
   function handleOpenPageOfRegisterUser(value) {
     setToggleCheckBox(value);
@@ -19,7 +38,7 @@ const HomeScreen = () => {
         style={styles.imageStyles}
         source={require('../../assets/background-pizza.png')}
       />
-      <Styles.Form style={styles.elevationForm}>
+      <Styles.Form style={[styles.elevationForm, formStyle]}>
         <Styles.Wrapper>
           <Styles.CheckBoxStyle
             disabled={false}

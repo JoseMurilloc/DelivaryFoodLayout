@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 import CheckBox from '@react-native-community/checkbox';
+import Animated from 'react-native-reanimated';
 
 const Container = styled.View`
   flex: 1;
@@ -8,7 +9,7 @@ const Container = styled.View`
   background-color: #fff;
 `;
 
-const Form = styled.View`
+const Form = styled(Animated.View)`
   padding: 30px;
   width: 350px;
   background: #f3f3f3;
@@ -74,7 +75,7 @@ const ContainerRegister = styled.View`
   right: 0;
   border-radius: 50px;
   height: 100%;
-  width: 55%;
+  width: 45%;
   background-color: #f3f3f3;
   justify-content: center;
   align-items: center;
