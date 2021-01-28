@@ -9,7 +9,6 @@ const Container = styled.View`
 const Content = styled.View`
   margin-top: 20px;
   height: 170px;
-  justify-content: space-between;
   align-items: center;
 `;
 
@@ -19,6 +18,7 @@ const ButtonContinue = styled(LinearGradient)`
   border-radius: 30px;
   width: 245px;
   height: 44px;
+  margin-bottom: 10px;
 
   justify-content: center;
   align-items: center;
