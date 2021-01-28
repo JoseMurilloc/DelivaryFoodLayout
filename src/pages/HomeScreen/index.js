@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {Image, Text, StyleSheet} from 'react-native';
 import {
   useSharedValue,
@@ -11,7 +11,6 @@ import Input from '../../components/Input';
 import Styles from './style';
 
 const HomeScreen = () => {
-  const [toggleCheckBox, setToggleCheckBox] = useState(false);
   const formPosition = useSharedValue(30);
   const formOpacity = useSharedValue(0);
 
@@ -27,11 +26,6 @@ const HomeScreen = () => {
     };
   }, []);
 
-  function handleOpenPageOfRegisterUser(value) {
-    setToggleCheckBox(value);
-    console.tron.log(toggleCheckBox);
-  }
-
   return (
     <Styles.Container>
       <Image
@@ -40,20 +34,13 @@ const HomeScreen = () => {
       />
       <Styles.Form style={[styles.elevationForm, formStyle]}>
         <Styles.Wrapper>
-          <Styles.CheckBoxStyle
-            disabled={false}
-            value={toggleCheckBox}
-            onValueChange={(value) => handleOpenPageOfRegisterUser(value)}
-          />
-          <Styles.ContainerLogin>
-            <Styles.ContainerLoginText>Login</Styles.ContainerLoginText>
-          </Styles.ContainerLogin>
+          <Styles.ButtonLogin>
+            <Styles.ButtonLoginText>Login</Styles.ButtonLoginText>
+          </Styles.ButtonLogin>
 
-          <Styles.ContainerRegister>
-            <Styles.ContainerRegisterText>
-              Register
-            </Styles.ContainerRegisterText>
-          </Styles.ContainerRegister>
+          <Styles.ButtonRegister>
+            <Styles.ButtonRegisterText>Register</Styles.ButtonRegisterText>
+          </Styles.ButtonRegister>
         </Styles.Wrapper>
 
         <Styles.ContainerInput>

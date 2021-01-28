@@ -1,5 +1,4 @@
 import styled from 'styled-components/native';
-import CheckBox from '@react-native-community/checkbox';
 import Animated from 'react-native-reanimated';
 
 const Container = styled.View`
@@ -25,24 +24,41 @@ const Form = styled(Animated.View)`
 `;
 
 const Wrapper = styled.View`
-  width: 245.71px;
-  height: 32px;
-
-  background: #f3f3f3;
-  border: 1.14286px solid #dcdada;
-  border-radius: 34.2857px;
+  flex-direction: row;
 `;
 
-const CheckBoxStyle = styled(CheckBox)`
-  width: 100%;
-  height: 100%;
+const ButtonLogin = styled.TouchableOpacity`
+  width: 121.6px;
+  height: 29.1px;
+  background: #099e76;
+  border-radius: 31px;
+  justify-content: center;
+  align-items: center;
+`;
 
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 0;
-  opacity: 0;
-  z-index: 10;
+const ButtonLoginText = styled.Text`
+  font-weight: bold;
+  font-size: 14px;
+  color: #f3f3f3;
+`;
+
+const ButtonRegister = styled.TouchableOpacity`
+  background: #f3f3f3;
+  border: 1px solid #dcdada;
+  border-radius: 31px;
+  width: 121.6px;
+  height: 29.1px;
+
+  margin-left: 5px;
+
+  justify-content: center;
+  align-items: center;
+`;
+
+const ButtonRegisterText = styled.Text`
+  font-weight: bold;
+  font-size: 14px;
+  color: #343a36;
 `;
 
 const Social = styled.View`
@@ -51,40 +67,6 @@ const Social = styled.View`
   align-items: center;
 
   width: 162px;
-`;
-
-const ContainerLogin = styled.View`
-  position: absolute;
-  border-radius: 50px;
-  height: 100%;
-  width: 55%;
-  background-color: #099e76;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-`;
-
-const ContainerLoginText = styled.Text`
-  font-weight: bold;
-  font-size: 14px;
-  color: #f3f3f3;
-`;
-
-const ContainerRegister = styled.View`
-  position: absolute;
-  right: 0;
-  border-radius: 50px;
-  height: 100%;
-  width: 45%;
-  background-color: #f3f3f3;
-  justify-content: center;
-  align-items: center;
-`;
-
-const ContainerRegisterText = styled.Text`
-  font-weight: bold;
-  font-size: 14px;
-  color: #343a36;
 `;
 
 const ForgotPasswordContainer = styled.View`
@@ -114,10 +96,10 @@ const Styles = {
   Wrapper,
   CheckBoxStyle,
   Social,
-  ContainerLogin,
-  ContainerLoginText,
-  ContainerRegister,
-  ContainerRegisterText,
+  ButtonLogin,
+  ButtonLoginText,
+  ButtonRegister,
+  ButtonRegisterText,
   ForgotPasswordContainer,
   ContainerInput,
   Or,
