@@ -13,7 +13,7 @@ const Routes = () => {
         screenOptions={{
           headerShown: false,
         }}>
-        <Stack.Screen name="Home" component={Pages.HomeScreen} />
+        <Stack.Screen name="Login" component={Pages.LoginScreen} />
         <Stack.Screen name="Register" component={Pages.RegisterScreen} />
       </Stack.Navigator>
     </NavigationContainer>

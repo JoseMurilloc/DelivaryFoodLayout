@@ -1,8 +1,8 @@
-import HomeScreen from './HomeScreen';
+import LoginScreen from './LoginScreen';
 import RegisterScreen from './RegisterScreen';
 
 const Pages = {
-  HomeScreen,
+  LoginScreen,
   RegisterScreen,
 };
 

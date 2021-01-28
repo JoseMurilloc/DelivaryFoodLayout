@@ -10,7 +10,7 @@ import Button from '../../components/Button';
 import Input from '../../components/Input';
 import Styles from './style';
 
-const HomeScreen = ({navigation}) => {
+const LoginScreen = ({navigation}) => {
   const formPosition = useSharedValue(30);
   const formOpacity = useSharedValue(0);
 
@@ -75,4 +75,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default LoginScreen;

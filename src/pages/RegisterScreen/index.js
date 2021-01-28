@@ -10,7 +10,7 @@ import Button from '../../components/Button';
 import Input from '../../components/Input';
 import Styles from './styles';
 
-const HomeScreen = ({navigation}) => {
+const LoginScreen = ({navigation}) => {
   const formPosition = useSharedValue(30);
   const formOpacity = useSharedValue(0);
 
@@ -34,7 +34,7 @@ const HomeScreen = ({navigation}) => {
       />
       <Styles.Form style={[styles.elevationForm, formStyle]}>
         <Styles.Wrapper>
-          <Styles.ButtonLogin onPress={() => navigation.navigate('Home')}>
+          <Styles.ButtonLogin onPress={() => navigation.goBack()}>
             <Styles.ButtonLoginText>Login</Styles.ButtonLoginText>
           </Styles.ButtonLogin>
 
@@ -73,4 +73,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default LoginScreen;
