@@ -94,7 +94,6 @@ const Styles = {
   Container,
   Form,
   Wrapper,
-  CheckBoxStyle,
   Social,
   ButtonLogin,
   ButtonLoginText,
