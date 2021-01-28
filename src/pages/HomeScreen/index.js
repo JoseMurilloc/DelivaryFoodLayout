@@ -10,7 +10,7 @@ import Button from '../../components/Button';
 import Input from '../../components/Input';
 import Styles from './style';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   const formPosition = useSharedValue(30);
   const formOpacity = useSharedValue(0);
 
@@ -38,7 +38,8 @@ const HomeScreen = () => {
             <Styles.ButtonLoginText>Login</Styles.ButtonLoginText>
           </Styles.ButtonLogin>
 
-          <Styles.ButtonRegister>
+          <Styles.ButtonRegister
+            onPress={() => navigation.navigate('Register')}>
             <Styles.ButtonRegisterText>Register</Styles.ButtonRegisterText>
           </Styles.ButtonRegister>
         </Styles.Wrapper>
