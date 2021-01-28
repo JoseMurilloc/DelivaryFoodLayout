@@ -52,7 +52,7 @@ const LoginScreen = ({navigation}) => {
         <Styles.ForgotPasswordContainer>
           <Text>Forgot your password?</Text>
         </Styles.ForgotPasswordContainer>
-        <Button label="Login" />
+        <Button label="Login" onPress={() => navigation.navigate('Home')} />
 
         <Styles.Or>Or</Styles.Or>
 
