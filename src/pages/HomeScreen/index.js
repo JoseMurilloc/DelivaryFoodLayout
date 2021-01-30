@@ -5,7 +5,7 @@ import {StatusBar, TouchableOpacity} from 'react-native';
 
 import Styles from './styles';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   return (
     <>
       <StatusBar
@@ -23,14 +23,14 @@ const HomeScreen = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
               }}
-              onPress={() => console.tron.log('Navigation Delivery Dashboard')}>
+              onPress={() => navigation.navigate('Dashboard')}>
               <Styles.ButtonContinueText>Delivery</Styles.ButtonContinueText>
             </TouchableOpacity>
           </Styles.ButtonContinue>
           <Button
             label="Withdrawal"
             styleTypes="withdrawal"
-            onPress={() => console.tron.log('Navigation Withdrawal Dashboard')}
+            onPress={() => navigation.navigate('Dashboard')}
           />
         </Styles.Content>
       </Styles.Container>

@@ -18,12 +18,11 @@ const Container = styled.TouchableOpacity`
     `}
 `;
 const ContainerText = styled.Text`
-  font-weight: bold;
   font-size: 14px;
   line-height: 16px;
 
   color: #f3f3f3;
-
+  font-family: 'Roboto-Black';
   ${(props) =>
     props.styleTypes === 'withdrawal' &&
     css`

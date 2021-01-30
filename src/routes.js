@@ -43,6 +43,7 @@ const Routes = () => {
             ),
           })}
         />
+        <Stack.Screen name="Dashboard" component={Pages.DashboardScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

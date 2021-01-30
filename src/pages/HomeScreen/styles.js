@@ -24,7 +24,7 @@ const ButtonContinue = styled(LinearGradient)`
   align-items: center;
 `;
 const ButtonContinueText = styled.Text`
-  font-weight: bold;
+  font-family: 'Roboto-Black';
   font-size: 14px;
 
   color: #f3f3f3;

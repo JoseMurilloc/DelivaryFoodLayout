@@ -4,7 +4,7 @@ import Animated from 'react-native-reanimated';
 const Container = styled.View`
   flex: 1;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   background-color: #fff;
 `;
 
@@ -37,7 +37,7 @@ const ButtonLogin = styled.TouchableOpacity`
 `;
 
 const ButtonLoginText = styled.Text`
-  font-weight: bold;
+  font-family: 'Roboto-Black';
   font-size: 14px;
   color: #f3f3f3;
 `;
@@ -56,7 +56,7 @@ const ButtonRegister = styled.TouchableOpacity`
 `;
 
 const ButtonRegisterText = styled.Text`
-  font-weight: bold;
+  font-family: 'Roboto-Black';
   font-size: 14px;
   color: #343a36;
 `;
@@ -74,6 +74,7 @@ const ForgotPasswordContainer = styled.View`
   align-items: flex-end;
   width: 245px;
   margin-top: 5px;
+  font-family: 'Roboto-Regular';
 `;
 
 const ContainerInput = styled.View`
@@ -88,6 +89,7 @@ const Or = styled.Text`
   color: #5d6660;
   margin-top: 20px;
   margin-bottom: 35px;
+  font-family: 'Roboto-Black';
 `;
 
 const Styles = {
